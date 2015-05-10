@@ -19,7 +19,7 @@ var init = function () {
 
 };
 
-function fetchResults(query) {
+function fetchResults( query ) {
 
     $.getJSON('http://api.flickr.com/services/feeds/photos_public.gne?tags=' + query + '&tagmode=all&format=json&jsoncallback=?',
         // Using ? just means call the callback function provided
@@ -40,7 +40,7 @@ function fetchResults(query) {
 
 function clearPreviousResults() {
 
-    $('div.img').each(function () {
+    $('div.imageBox').each(function () {
         this.remove();
     });
 }
